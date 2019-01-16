@@ -1,0 +1,407 @@
+body{
+    margin: 25px;
+    padding: 25px;
+    color:white;
+    background-color: black;
+    font-family: Comic Sans MS, Helvetica, sans-serif;
+    border-style: solid;
+    border-color: white;
+    box-sizing: border-box; 
+}
+
+#aboutme {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+#exp {
+    margin-left: 40px;
+    /* margin-top: -25px; */
+}
+#profile {
+    /* border-radius: 100px 1px 100px; */
+    border-radius: 50%;
+    /* margin-left: 500px; */
+    margin-top: 50px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:300');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+#quote {
+	font-family: 'Arima Madurai', cursive;
+	color: black;
+	font-size: 4rem;
+	letter-spacing: -3px;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
+	position: relative;
+	z-index: 3;
+}
+
+.container {
+	z-index: 1;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 35rem;
+	background-image: linear-gradient(to bottom,  rgba(255,168,76,0.6) 0%,rgba(255,123,13,0.6) 100%), url('https://images.unsplash.com/photo-1446824505046-e43605ffb17f');
+	background-blend-mode: soft-light;
+	background-size: cover;
+	background-position: center center;
+	padding: 2rem;
+}
+
+.bird {
+	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells.svg);
+	background-size: auto 100%;
+	width: 88px;
+	height: 125px;
+	will-change: background-position;
+	
+	animation-name: fly-cycle;
+	animation-timing-function: steps(10);
+	animation-iteration-count: infinite;
+}
+.bird.bird--one {
+	animation-duration: 1s;
+	animation-delay: -0.5s;		
+}
+	
+.bird.bird--two {
+	animation-duration: 0.9s;
+	animation-delay: -0.75s;
+}
+	
+.bird.bird--three {
+	animation-duration: 1.25s;
+	animation-delay: -0.25s;
+}
+	
+.bird.bird--four {
+	animation-duration: 1.1s;
+	animation-delay: -0.5s;
+}
+
+
+.bird-container {
+	position: absolute;
+	top: 20%;
+	left: -10%;
+	transform: scale(0) translateX(-10vw);
+	will-change: transform;
+	
+	animation-name: fly-right-one;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+.bird-container.bird-container--one {
+	animation-duration: 15s;
+	animation-delay: 0;
+}
+	
+.bird-container.bird-container--two {
+	animation-duration: 16s;
+	animation-delay: 1s;
+}
+	
+.bird-container.bird-container--three {
+    animation-duration: 14.6s;
+	animation-delay: 9.5s;
+}
+	
+.bird-container.bird-container--four {
+	animation-duration: 16s;
+	animation-delay: 10.25s;
+}
+
+
+@keyframes fly-cycle {
+	
+	100% {
+		background-position: -900px 0;
+	}
+	
+}
+
+@keyframes fly-right-one {
+	
+	0% {
+		transform: scale(0.3) translateX(-10vw);
+	}
+	
+	10% {
+		transform: translateY(2vh) translateX(10vw) scale(0.4);
+	}
+	
+	20% {
+		transform: translateY(0vh) translateX(30vw) scale(0.5);
+	}
+	
+	30% {
+		transform: translateY(4vh) translateX(50vw) scale(0.6);
+	}
+	
+	40% {
+		transform: translateY(2vh) translateX(70vw) scale(0.6);
+	}
+	
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.6);
+	}
+	
+	60% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.6);
+	}
+	
+}
+
+@keyframes fly-right-two {
+	
+	0% {
+		transform: translateY(-2vh) translateX(-10vw) scale(0.5);
+	}
+	
+	10% {
+		transform: translateY(0vh) translateX(10vw) scale(0.4);
+	}
+	
+	20% {
+		transform: translateY(-4vh) translateX(30vw) scale(0.6);
+	}
+	
+	30% {
+		transform: translateY(1vh) translateX(50vw) scale(0.45);
+	}
+	
+	40% {
+		transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+	}
+	
+	50% {
+		transform: translateY(0vh) translateX(90vw) scale(0.45);
+	}
+	
+	51% {
+		transform: translateY(0vh) translateX(110vw) scale(0.45);
+	}
+	
+	100% {
+		transform: translateY(0vh) translateX(110vw) scale(0.45);
+	}
+	
+}
+
+
+/* @import 'https://fonts.googleapis.com/css?family=Indie+Flower'; */
+/* Border from Y to X  */
+
+div#navbar
+{
+    font-family: Comic Sans MS, Helvetica, sans-serif;
+    margin: 0 auto;
+	/* padding: 10em 3em; */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+div#navbar a
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+div#navbar a:before, div#navbar a:after
+{
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 2px;
+    content: '';
+    background: #FFF;
+    transition: all 0.3s;
+}
+
+div#navbar a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+div#navbar a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+div#navbar a:hover:before, div#navbar a:hover:after
+{
+    opacity: 1;
+    height: 2px;
+    width: 100%;
+}
+#skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.image {
+    height: 100px;
+    width: 100px;
+}
+p.lang {
+    font-style: italic;
+    width: 250px;
+    border: 1px solid black;
+    word-wrap: normal;
+}
+#contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.contact-me {
+    height: 50px;
+    width: 50px;
+}  
+img.crypto {
+    
+    position: absolute;
+    height: 350px;
+    width:400px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 0 hsla(0,0%,30%, .3);
+}
+.crypto:nth-child(4) {
+    animation: xfade 16s 0s infinite;
+}
+.crypto:nth-child(3) {
+    animation: xfade 16s 4s infinite;
+}
+.crypto:nth-child(2) {
+    animation: xfade 16s 8s infinite;
+}
+.crypto:nth-child(1) {
+    animation: xfade 16s 12s infinite;
+}
+@keyframes xfade{
+    17% {
+    opacity:1;
+    }
+    25% {
+    opacity:0;
+    }
+    92% {
+    opacity:0;
+    }
+}
+
+img.d3 {
+    position: absolute;
+    height: 350px;
+    width:400px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 0 hsla(0,0%,30%, .3);
+}
+
+.d3:nth-child(4) {
+    animation: xfade 16s 0s infinite;
+}
+.d3:nth-child(3) {
+    animation: xfade 16s 4s infinite;
+}
+.d3:nth-child(2) {
+    animation: xfade 16s 8s infinite;
+}
+.d3:nth-child(1) {
+    animation: xfade 16s 12s infinite;
+}
+@keyframes xfade{
+    17% {
+    opacity:1;
+    }
+    25% {
+    opacity:0;
+    }
+    92% {
+    opacity:0;
+    }
+}
+
+#skilltag{
+    margin-top:250px;
+}
+#proj1 p {
+    margin-left: 420px;
+    /* margin-bottom : -20px; */
+}
+#proj2 p {
+    margin-left: 420px;
+}
+#proj3 p {
+    margin-left: 420px;
+}
+#proj1 {
+    margin-bottom: 400px;
+}
+#proj2 {
+    margin-bottom: 400px;
+}
+.proj-desc{
+    width: 500px;
+    border: 1px solid black;
+    word-wrap: normal;
+}
+
+img.python {
+    
+    position: absolute;
+    height: 350px;
+    width:400px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    box-shadow: 0 0 5px 0 hsla(0,0%,30%, .3);
+}
+
+.python:nth-child(4) {
+    animation: xfade 16s 0s infinite;
+}
+.python:nth-child(3) {
+    animation: xfade 16s 4s infinite;
+}
+.python:nth-child(2) {
+    animation: xfade 16s 8s infinite;
+}
+.python:nth-child(1) {
+    animation: xfade 16s 12s infinite;
+}
+@keyframes xfade{
+    17% {
+    opacity:1;
+    }
+    25% {
+    opacity:0;
+    }
+    92% {
+    opacity:0;
+    }
+}
